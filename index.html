@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobSwipe - Swipe Right for Your Dream Job</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            <h1>JobSwipe</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="swipe-container">
+            <div class="card-stack" id="card-stack">
+                <!-- Cards will be added dynamically via JavaScript -->
+            </div>
+
+            <div class="swipe-buttons">
+                <button id="reject-btn" class="btn reject">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="info-btn" class="btn info">
+                    <i class="fas fa-info"></i>
+                </button>
+                <button id="like-btn" class="btn like">
+                    <i class="fas fa-check"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="matches-container">
+            <h2>Your Matched Jobs</h2>
+            <div class="matches-list" id="matches-list">
+                <!-- Matches will be added here -->
+                <div class="no-matches">
+                    <p>No matches yet. Start swiping to find your dream job!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="job-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Job details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 JobSwipe - Find your perfect career match!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
